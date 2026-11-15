@@ -1,0 +1,6 @@
+{
+  "name": "LUNO Qatar",
+  "description": "LUNO — Creating Timeless Memories. Coming soon to Porto Arabia, The Pearl, Qatar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

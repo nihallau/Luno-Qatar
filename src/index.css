@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@layer base {
+  html {
+    background-color: var(--color-burgundy-deep);
+    color: var(--color-washi-cream);
+    font-family: var(--font-body);
+    font-weight: 300;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-burgundy-deep);
+    color: var(--color-washi-cream);
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline: 1.5px solid var(--color-gold);
+    outline-offset: 4px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-jp {
+  font-family: var(--font-jp);
+}
+
+.vertical-text-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.small-caps-luxury {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.28em;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes seigaiha-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-120px, -60px, 0);
+  }
+}
+
+.animate-seigaiha-drift {
+  animation: seigaiha-drift 42s linear infinite;
+  will-change: transform;
+}
+
+@keyframes particle-float-down {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--particle-opacity, 0.45);
+  }
+  50% {
+    transform: translate3d(var(--particle-sway, 22px), 48vh, 0) rotate(var(--particle-rot-mid, 45deg));
+  }
+  88% {
+    opacity: var(--particle-opacity, 0.45);
+  }
+  100% {
+    transform: translate3d(calc(var(--particle-sway, 22px) * -0.4), 108vh, 0) rotate(var(--particle-rot-end, 110deg));
+    opacity: 0;
+  }
+}
+
+.animate-particle-fall {
+  animation: particle-float-down var(--particle-duration, 20s) linear var(--particle-delay, 0s) infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-seigaiha-drift {
+    animation: none;
+  }
+
+  .animate-particle-fall {
+    animation: none;
+    opacity: 0;
+  }
+}
