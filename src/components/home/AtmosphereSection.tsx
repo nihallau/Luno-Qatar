@@ -61,14 +61,14 @@ export function AtmosphereSection() {
       ref={sectionRef}
       id="atmosphere"
       aria-labelledby="atmosphere-heading"
-      className="relative py-16 sm:py-24 lg:py-32 border-t border-[#C9A15A]/18 overflow-hidden"
+      className="relative pt-12 sm:pt-16 lg:pt-20 pb-0 border-t border-[#C9A15A]/18 overflow-hidden"
     >
       {/* Alternating Right-Aligned Intro */}
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-14 mb-10 sm:mb-16">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-14 mb-6 sm:mb-9">
         <motion.div
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 'some' }}
           transition={
             prefersReducedMotion
               ? { duration: 0.2 }
@@ -103,7 +103,7 @@ export function AtmosphereSection() {
       </div>
 
       {/* Full-Width Parallax Photographic Atmosphere Band */}
-      <div className="relative w-full border-y border-[#C9A15A]/22 bg-[#23060B]/75 py-8 sm:py-14">
+      <div className="relative w-full border-y border-[#C9A15A]/22 bg-[#23060B]/75 py-6 sm:py-8">
         <motion.div
           style={
             prefersReducedMotion || !isTabletOrDesktop

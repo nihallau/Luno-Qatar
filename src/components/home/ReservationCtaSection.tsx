@@ -13,25 +13,25 @@ export function ReservationCtaSection() {
     <section
       id="reserve-cta"
       aria-labelledby="reserve-cta-heading"
-      className="relative py-20 sm:py-32 lg:py-40 border-t border-[#C9A15A]/18 overflow-hidden"
+      className="relative pt-8 sm:pt-10 lg:pt-12 pb-14 sm:pb-16 overflow-hidden"
     >
       {/* Subtle Ambient Gold Enso Centered Behind Call to Action */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-25"
       >
-        <EnsoCircle className="w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] text-[#C9A15A]" />
+        <EnsoCircle className="w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] text-[#C9A15A]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-14 text-center">
         <motion.div
-          initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
+          initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0.15, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.01 }}
           transition={
             prefersReducedMotion
               ? { duration: 0.2 }
-              : { duration: 0.9, ease: SHOJI_EASE }
+              : { duration: 0.75, ease: SHOJI_EASE }
           }
           className="max-w-2xl mx-auto flex flex-col items-center"
         >

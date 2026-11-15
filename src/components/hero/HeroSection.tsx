@@ -502,11 +502,11 @@ export function HeroSection({
               {/* Mobile/Tablet Japanese Kanji Signature Strip */}
               <div
                 aria-hidden="true"
-                className="flex lg:hidden items-center gap-3 mb-4 text-[11px] font-jp tracking-[0.35em] text-[#C9A15A]/75"
+                className="flex lg:hidden items-center justify-center gap-2.5 sm:gap-3 mb-4 text-[10px] sm:text-[11px] font-jp tracking-[0.22em] sm:tracking-[0.35em] text-[#C9A15A]/75 text-center max-w-full"
               >
-                <span className="h-px w-8 bg-[#C9A15A]/35" />
+                <span className="h-px w-4 sm:w-8 shrink-0 bg-[#C9A15A]/35" />
                 <span>月乃 · 旬の味わい · おもてなし</span>
-                <span className="h-px w-8 bg-[#C9A15A]/35" />
+                <span className="h-px w-4 sm:w-8 shrink-0 bg-[#C9A15A]/35" />
               </div>
 
               <div className="relative w-[248px] h-[248px] sm:w-[380px] sm:h-[380px] xl:w-[440px] xl:h-[440px] flex items-center justify-center">

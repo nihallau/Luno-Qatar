@@ -448,7 +448,7 @@ export function MenuPage() {
         aria-label="Menu categories"
         className="lg:hidden sticky top-[var(--luno-header-h,56px)] transition-[top] duration-300 z-20 bg-[#2B0A10]/94 backdrop-blur-md border-y border-[#C9A15A]/22 mb-8 sm:mb-10"
       >
-        <div className="flex items-center gap-1 overflow-x-auto snap-x snap-mandatory px-3 py-2 no-scrollbar">
+        <div className="flex items-center gap-1 overflow-x-auto snap-x snap-mandatory px-3 py-1.5 no-scrollbar">
           {allNavCategories.map((cat) => {
             const isActive = activeCategoryId === cat.id;
             return (
@@ -456,7 +456,7 @@ export function MenuPage() {
                 key={cat.id}
                 type="button"
                 onClick={() => handleCategoryClick(cat.id)}
-                className={`relative snap-start px-3.5 py-2 min-h-[44px] text-[11px] tracking-[0.2em] uppercase whitespace-nowrap shrink-0 transition-colors ${
+                className={`relative snap-start px-3 py-2 min-h-[40px] text-[10px] tracking-[0.2em] uppercase whitespace-nowrap shrink-0 transition-colors ${
                   isActive ? 'text-[#C9A15A]' : 'text-[#F3E9DC]/65'
                 }`}
               >
@@ -593,7 +593,7 @@ export function MenuPage() {
             <section
               id={`menu-cat-${menuData.tastingMenu.id}`}
               aria-labelledby="tasting-menu-heading"
-              className="scroll-mt-32 relative border border-[#C9A15A]/45 bg-[#4A121C]/22 px-6 py-10 sm:px-12 sm:py-14"
+              className="scroll-mt-32 relative border border-[#C9A15A]/45 bg-[#4A121C]/22 px-4 py-8 sm:px-12 sm:py-14"
             >
               {/* Gold Corner Ornaments */}
               <span
@@ -698,7 +698,7 @@ export function MenuPage() {
               <div className="pt-6 border-t border-[#C9A15A]/22 flex justify-start sm:justify-end">
                 <Link
                   to={menuData.tastingMenu.ctaTo}
-                  className="group relative overflow-hidden inline-flex items-center justify-center px-7 py-3.5 min-h-[46px] border border-[#C9A15A] text-xs font-normal tracking-[0.24em] uppercase text-[#C9A15A] whitespace-nowrap transition-colors duration-300"
+                  className="group relative overflow-hidden inline-flex items-center justify-center w-full sm:w-auto px-7 py-3.5 min-h-[46px] border border-[#C9A15A] text-xs font-normal tracking-[0.24em] uppercase text-[#C9A15A] whitespace-nowrap transition-colors duration-300"
                 >
                   <span
                     aria-hidden="true"

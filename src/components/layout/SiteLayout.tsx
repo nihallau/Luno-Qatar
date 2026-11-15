@@ -4,7 +4,8 @@ import { motion, useReducedMotion } from 'motion/react';
 import { SiteHeader } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
 import { MobileFloatingBar } from './MobileFloatingBar';
-import { SHOJI_EASE } from '../motifs/ShojiReveal';
+
+const SHOJI_EASE = [0.16, 1, 0.3, 1] as const;
 
 export function SiteLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,20 +35,12 @@ export function SiteLayout() {
       <main className="flex-1 flex flex-col">
         <motion.div
           key={pathname}
-          initial={
-            prefersReducedMotion
-              ? { opacity: 0 }
-              : { opacity: 0.25, clipPath: 'inset(0 100% 0 0)' }
-          }
-          animate={
-            prefersReducedMotion
-              ? { opacity: 1 }
-              : { opacity: 1, clipPath: 'inset(0 0% 0 0)' }
-          }
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={
             prefersReducedMotion
               ? { duration: 0.15 }
-              : { duration: 0.72, ease: SHOJI_EASE }
+              : { duration: 0.45, ease: SHOJI_EASE }
           }
           className="flex-1 flex flex-col"
         >

@@ -3,7 +3,6 @@ import { useReducedMotion } from 'motion/react';
 import { HeroSection } from '../components/hero/HeroSection';
 import { MenuTeaserSection } from '../components/home/MenuTeaserSection';
 import { AtmosphereSection } from '../components/home/AtmosphereSection';
-import { GallerySection } from '../components/home/GallerySection';
 import { ReservationCtaSection } from '../components/home/ReservationCtaSection';
 
 interface HomePageProps {
@@ -31,7 +30,6 @@ export function HomePage({ isRevealed }: HomePageProps) {
       />
       <MenuTeaserSection />
       <AtmosphereSection />
-      <GallerySection />
       <ReservationCtaSection />
     </>
   );

@@ -14,20 +14,20 @@ export function MenuTeaserSection() {
     <section
       id="menu-teaser"
       aria-labelledby="menu-teaser-heading"
-      className="relative py-16 sm:py-24 lg:py-32 border-t border-[#C9A15A]/18"
+      className="relative py-16 sm:py-20 lg:py-24 border-t border-[#C9A15A]/18"
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-14">
         {/* Alternating Left-Aligned Header + Explore Link */}
         <motion.div
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 'some' }}
           transition={
             prefersReducedMotion
               ? { duration: 0.2 }
               : { duration: 0.85, ease: SHOJI_EASE }
           }
-          className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-14"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-12"
         >
           <div>
             <p className="font-body text-[11px] font-light tracking-[0.34em] uppercase text-[#C9A15A] mb-3">

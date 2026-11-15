@@ -345,7 +345,7 @@ export function SiteHeader({
               className="relative z-10 h-full flex flex-col justify-between px-5 sm:px-6 pt-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] overflow-y-auto"
             >
               {/* Top Bar Inside Mobile Menu */}
-              <div className="flex items-center justify-between pb-3 border-b border-[#C9A15A]/20">
+              <div className="shrink-0 flex items-center justify-between pb-3 border-b border-[#C9A15A]/20">
                 <Link
                   to="/"
                   onClick={onCloseMobileMenu}
@@ -413,7 +413,7 @@ export function SiteHeader({
               </nav>
 
               {/* Bottom Phones & Address */}
-              <div className="pt-6 border-t border-[#C9A15A]/20 space-y-4">
+              <div className="shrink-0 pt-6 border-t border-[#C9A15A]/20 space-y-4">
                 <div>
                   <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#C9A15A] mb-1.5">
                     Location

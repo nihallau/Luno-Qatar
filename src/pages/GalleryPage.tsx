@@ -211,7 +211,7 @@ function GalleryCard({ item, index, onOpen }: GalleryCardProps) {
               {item.category}
               {item.isPlaceholder ? ' · Placeholder' : ''}
             </span>
-            <span className="block font-display text-lg font-light text-[#F3E9DC] group-hover:text-[#C9A15A] transition-colors truncate">
+            <span className="block font-display text-lg font-light text-[#F3E9DC] group-hover:text-[#C9A15A] transition-colors sm:truncate">
               {item.title}
             </span>
           </div>
@@ -400,7 +400,7 @@ export function GalleryPage() {
             </p>
           </div>
 
-          <div className="relative aspect-[16/9] max-h-[520px] w-full border border-[#C9A15A]/30 bg-[#23060B] overflow-hidden">
+          <div className="relative min-h-[240px] sm:min-h-0 sm:aspect-[16/9] max-h-[520px] w-full border border-[#C9A15A]/30 bg-[#23060B] overflow-hidden">
             {galleryData.ambienceReel.videoSrc ? (
               <video
                 src={galleryData.ambienceReel.videoSrc}
@@ -411,18 +411,18 @@ export function GalleryPage() {
                 className="w-full h-full object-cover block"
               />
             ) : (
-              <div className="relative w-full h-full flex flex-col items-center justify-center p-6 text-center">
+              <div className="relative w-full h-full min-h-[240px] sm:min-h-0 flex flex-col items-center justify-center">
                 <AbstractPlaceholderArtwork
                   motif="wave"
-                  title="Ambience Reel — Video Loop Slot (Muted · PlaysInline)"
+                  title="Video Loop Ready"
                   large
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-6">
-                  <span className="inline-flex items-center justify-center w-12 h-12 border border-[#C9A15A]/50 bg-[#2B0A10]/80 text-[#C9A15A] mb-3">
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-4 text-center">
+                  <span className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 border border-[#C9A15A]/50 bg-[#2B0A10]/85 text-[#C9A15A] mb-2.5 sm:mb-3">
                     <Film className="w-5 h-5" strokeWidth={1.2} />
                   </span>
-                  <span className="font-body text-[11px] tracking-[0.28em] uppercase text-[#C9A15A]">
-                    Coming Soon · Video Loop Ready
+                  <span className="font-body text-[10px] sm:text-[11px] tracking-[0.24em] sm:tracking-[0.28em] uppercase text-[#C9A15A]">
+                    Coming Soon · Video Loop Slot
                   </span>
                 </div>
               </div>
